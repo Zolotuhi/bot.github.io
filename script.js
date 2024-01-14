@@ -1,3 +1,27 @@
+function openModal(modalId) {
+    var modal = document.getElementById(modalId);
+    modal.style.display = "block";
+}
+
+function closeModal(modalId) {
+    var modal = document.getElementById(modalId);
+    modal.style.display = "none";
+}
+
+
+document.getElementById('light-theme-toggle').addEventListener('click', function() {
+    document.body.className = 'light-theme';
+});
+
+document.getElementById('dark-theme-toggle').addEventListener('click', function() {
+    document.body.className = 'dark-theme';
+});
+
+document.getElementById('orange-theme-toggle').addEventListener('click', function() {
+    document.body.className = 'orange-theme';
+});
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const cart = [];
 
@@ -19,6 +43,14 @@ document.addEventListener('DOMContentLoaded', () => {
             updateCart();
         });
     });
+
+    
+    // Закрытие модального окна при клике вне его области
+    window.onclick = function(event) {
+        if (event.target.classList.contains('modal')) {
+        event.target.style.display = "none";
+        }
+    }
 
     function updateCart() {
         const cartItems = document.getElementById('cart-items');

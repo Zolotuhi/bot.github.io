@@ -9,6 +9,9 @@
 <body>
     <header>
         <h1> Магазин бытовой техники</h1>
+        <img id="light-theme-toggle" src="white1.png" alt="Белая тема">
+        <img id="dark-theme-toggle" src="1614517337_4-p-krug-na-belom-fone-4.png" alt="Ночная тема">
+        <img id="orange-theme-toggle" src="1614517337_4-p-krug-na-belom-fone-41.png" alt="Тёмно-оранжевая тема">
     </header>
     <main>
         <section class="cart">
@@ -20,40 +23,72 @@
     <button id="checkout-button">Оплатить</button>
     <button id="clear-cart-button">Очистить всё</button>
 </section>
+
+            <div id="modal1" class="modal">
+                <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>Характеристики товара 1</p>
+                <p>Характеристики товара 1</p>
+                </div>
+            </div>
+            
+            <!-- Пример модального окна для товара 2 -->
+            <div id="modal2" class="modal">
+                <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>Характеристики товара 2</p>
+                </div>
+            </div>
+
+            <div id="modal3" class="modal">
+                <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>Характеристики товара 3</p>
+                </div>
+            </div>
+
+            <div id="modal4" class="modal">
+                <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>Характеристики товара 4</p>
+                </div>
+            </div>
+
+
         <section class="products">
             <!-- Пример продукта -->
             <article class="product">
-                <img src="intelcorei9.png" alt="CPU Intel Core i9-9980XE">
-                <h2>CPU Intel Core i9-9980XE</h2>
-                <p>3,0GHz (4,4GHz) LGA2066 18/36 Skylake 24,75MB 165W BOX</p>
-                <p>Цена: ₸659999</p>
+                <img src="Стиралка.png" alt="Стиральная машина">
+                <h2>Стиральная машина LG F-2M5HS6S</h2>
+                <button onclick="openModal('modal1')">Показать характеристики</button>
+                <p>Цена: ₸244999</p>
                 <button>Добавить в корзину</button>
             </article>
 
             <!-- Graphics Card -->
             <article class="product">
-                <img src="nvidiartx3080.png" alt="Graphics Card NVIDIA RTX 3080">
-                <h2>Graphics Card NVIDIA RTX 3080</h2>
-                <p>10GB GDDR6X, Ray Tracing, PCIe 4.0, 3x DisplayPort, 1x HDMI</p>
-                <p>Цена: ₸899999</p>
+                <img src="ХОЛОДИЛЬНИК.png" alt="Холодильник Samsung RB-38T7762SA">
+                <h2>Холодильник Samsung RB-38T7762SA</h2>
+                <button onclick="openModal('modal2')">Показать характеристики</button>
+                <p>Цена: ₸414 990</p>
                 <button>Добавить в корзину</button>
             </article>
 
             <!-- Motherboard -->
             <article class="product">
-                <img src="asusrogmotherboard.png" alt="Motherboard ASUS ROG Strix Z590-E">
-                <h2>Motherboard ASUS ROG Strix Z590-E</h2>
-                <p>Socket LGA 1200, Intel Z590 Chipset, ATX, Wi-Fi 6, PCIe 4.0, USB 3.2 Gen 2x2</p>
-                <p>Цена: ₸259999</p>
+                <img src="Микроаолновка.png" alt="Микроволновая печь LG MS-2044V">
+                <h2>Микроволновая печь LG MS-2044V</h2>
+                <button onclick="openModal('modal3')">Показать характеристики</button>
+                <p>Цена: ₸52990</p>
                 <button>Добавить в корзину</button>
             </article>
 
             <!-- RAM Module -->
             <article class="product">
-                <img src="corsairvengeance.png" alt="RAM Corsair Vengeance LPX">
-                <h2>RAM Corsair Vengeance LPX</h2>
-                <p>16GB (2x8GB) DDR4 3200MHz C16, Black</p>
-                <p>Цена: ₸79999</p>
+                <img src="Духовка.png" alt="RAM Corsair Vengeance LPX Встраиваемая духовка Bosch HBJ-558YB0Q">
+                <h2>Встраиваемая духовка Bosch HBJ-558YB0Q</h2>
+                <button onclick="openModal('modal4')">Показать характеристики</button>
+                <p>Цена: ₸389990</p>
                 <button>Добавить в корзину</button>
             </article>
 

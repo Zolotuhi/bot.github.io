@@ -1,52 +1,74 @@
+header {
+    display: flex; /* Используем Flexbox */
+    justify-content: space-between; /* Размещаем содержимое по краям */
+    align-items: center; /* Центрируем элементы по вертикали */
+    background: #f2f2f2;
+    color: #333;
+    padding: 0.5em 1em; /* Уменьшаем padding */
+}
+
+header h1 {
+    margin: 0; /* Убираем margin у заголовка */
+    flex-grow: 1; /* Заголовок занимает доступное пространство */
+}
+
+/* Стили для кнопок переключения темы */
+#light-theme-toggle, #dark-theme-toggle, #orange-theme-toggle {
+    width: 25px; /* Устанавливаем ширину */
+    height: 25px; /* Устанавливаем высоту */
+    margin-left: 10px; /* Добавляем отступ слева */
+    cursor: pointer; /* Курсор указывает на возможность клика */
+}
+
+
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background: #f7f7f7; /* Серый фон */
-    color: orange; /* Оранжевый текст */
+    background: #fff; /* Белый фон */
+    color: #333; /* Темно-серый текст */
 }
 
 header, footer {
-    background: #333;
-    color: white; /* Белый текст в header и footer */
+    background: #f2f2f2; /* Светло-серый фон */
+    color: #333; /* Темно-серый текст */
     text-align: center;
     padding: 1em 0;
 }
 
 header h1, footer p {
     margin: 0;
-    color: orange; /* Оранжевый текст в header и footer */
+    color: #333; /* Темно-серый текст */
 }
 
 main {
     padding: 1em;
-    background: #333;
+    background: #fff;
 }
 
 .products {
     display: flex;
     flex-wrap: wrap;
     gap: 1em;
-    background: #333;
 }
 
 .product {
     border: 1px solid #ddd;
     padding: 1em;
-    background: #333; /* Белый фон для продуктов */
-    color: orange; /* Оранжевый текст для продуктов */
+    background: #fff;
+    color: #333;
 }
 
 .product img {
-    max-width: 60%;
+    max-width: 100%;
     height: auto;
     display: block;
     margin: 0 auto;
 }
 
 button {
-    background: #323;
-    color: white; /* Белый текст на кнопках */
+    background: #333;
+    color: #fff;
     border: none;
     padding: 0.5em 1em;
     margin-top: 1em;
@@ -54,15 +76,15 @@ button {
 }
 
 button:hover {
-    background: orange;
+    background: #444;
 }
 
 .cart {
     margin-top: 2em;
     padding: 1em;
     border: 1px solid #ddd;
-    background: #333;
-    color: orange; /* Оранжевый текст для корзины */
+    background: #fff;
+    color: #333;
 }
 
 .cart h2 {
@@ -79,3 +101,105 @@ button:hover {
     padding-bottom: 0.5em;
     border-bottom: 1px solid #eee;
 }
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+body.dark-theme {
+    background: #333; /* Темный фон */
+    color: #fff; /* Светлый текст */
+}
+
+body.dark-theme header, body.dark-theme footer {
+    background: #444; /* Более темный фон для header и footer */
+    color: #fff; /* Светлый текст */
+}
+
+body.dark-theme .product, body.dark-theme .modal-content, body.dark-theme .cart {
+    background: #555; /* Светло-серый фон для элементов */
+    color: #fff; /* Светлый текст */
+}
+
+body.dark-theme button {
+    background: #666;
+    color: #fff;
+}
+
+body.dark-theme button:hover {
+    background: #777;
+}
+
+body.dark-theme main {
+    background: #555; 
+    color: #fff;
+ }
+
+
+ body.dark-theme h1 {
+    color: #fff
+ }
+
+ body.orange-theme {
+    background: black; /* Темный фон */
+    color: orange; /* Светлый текст */
+}
+
+body.orange-theme header, body.orange-theme footer {
+    background: #333; /* Более темный фон для header и footer */
+    color: orange; /* Светлый текст */
+}
+
+body.orange-theme .product, body.orange-theme .modal-content, body.orange-theme .cart {
+    background: black; /* Светло-серый фон для элементов */
+    color: orange; /* Светлый текст */
+}
+
+body.orange-theme button {
+    background: #666;
+    color: orange;
+}
+
+body.orange-theme button:hover {
+    background: #777;
+}
+
+body.orange-theme main {
+    background: black; 
+    color: orange;
+ }
+
+ body.orange-theme h1 {
+    color: orange
+ }
+
+ 
