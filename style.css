@@ -1,3 +1,16 @@
+.cart .quantity-button {
+    background: #555;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.cart .quantity-button:hover {
+    background: #666;
+}
+
 header {
     display: flex; /* Используем Flexbox */
     justify-content: space-between; /* Размещаем содержимое по краям */

@@ -7,6 +7,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Модальное окно для оформления заказа -->
+<div id="orderModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('orderModal')">&times;</span>
+      <h2>Оформление заказа</h2>
+      <form id="orderForm">
+        <label for="phone">Номер телефона:</label>
+        <input type="tel" id="phone" name="phone" required><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        <button type="submit">Оформить</button>
+      </form>
+    </div>
+  </div>
     <header>
         <h1> Магазин бытовой техники</h1>
         <img id="light-theme-toggle" src="white1.png" alt="Белая тема">
@@ -20,7 +34,7 @@
         <!-- Cart items will be listed here -->
     </ul>
     <p>Итого: <span id="cart-total">0</span> ₸</p>
-    <button id="checkout-button">Оплатить</button>
+    <button id="checkout-button" onclick="openModal('orderModal')">Оформить заказ</button>
     <button id="clear-cart-button">Очистить всё</button>
 </section>
 
@@ -62,7 +76,7 @@
                 <h2>Стиральная машина LG F-2M5HS6S</h2>
                 <button onclick="openModal('modal1')">Показать характеристики</button>
                 <p>Цена: ₸244999</p>
-                <button>Добавить в корзину</button>
+                <button class="add-to-cart">Добавить в корзину</button>
             </article>
 
             <!-- Graphics Card -->
@@ -71,7 +85,7 @@
                 <h2>Холодильник Samsung RB-38T7762SA</h2>
                 <button onclick="openModal('modal2')">Показать характеристики</button>
                 <p>Цена: ₸414 990</p>
-                <button>Добавить в корзину</button>
+                <button class="add-to-cart">Добавить в корзину</button>
             </article>
 
             <!-- Motherboard -->
@@ -80,7 +94,7 @@
                 <h2>Микроволновая печь LG MS-2044V</h2>
                 <button onclick="openModal('modal3')">Показать характеристики</button>
                 <p>Цена: ₸52990</p>
-                <button>Добавить в корзину</button>
+                <button class="add-to-cart">Добавить в корзину</button>
             </article>
 
             <!-- RAM Module -->
@@ -89,7 +103,7 @@
                 <h2>Встраиваемая духовка Bosch HBJ-558YB0Q</h2>
                 <button onclick="openModal('modal4')">Показать характеристики</button>
                 <p>Цена: ₸389990</p>
-                <button>Добавить в корзину</button>
+                <button class="add-to-cart">Добавить в корзину</button>
             </article>
 
             <!-- Добавьте дополнительные продукты здесь -->
